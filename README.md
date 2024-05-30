@@ -1,5 +1,5 @@
 # Rock-Paper-Scissors
 
-JavaScript game on browser console
+JavaScript game on browser console.
 
-// add the assignment info here reminder give a proper description  
+A Rock-Paper-Scissors game on the browser console using JavaScript. This is my very first JavaScript program.
