@@ -27,18 +27,38 @@ function getComputerChoice (){
 //     }
 // }
 
-
-function playRound(humanChoice, computerChoice){
-    if (humanChoice == computerChoice) console.log("It's a tie!!!!!");
-    else if ((humanChoice == "Rock" && computerChoice == "Paper") || (humanChoice == "Paper" && computerChoice == "Scissors") || (humanChoice == "Scissors" && computerChoice == "Rock")) {
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
-        computerScore += 1;
+function createDiv (computerC, humanC, statusNo){
+    const divScore = document.createElement("div");
+    divScore.style.textAlign = "center";
+    divScore.style.color = "white";
+    console.log(computerC,humanC,statusNo);
+    if (statusNo == 1){
+        divScore.innerHTML = `It's a tie!!!!!<br>Current Score: ${humanScore} - ${computerScore}`;
+    }
+    else if (statusNo == 2){
+        divScore.innerHTML = `You lose! ${computerC} beats ${humanC}.<br>Current Score: ${humanScore} - ${computerScore}`;
     }
     else {
-        console.log(`You Win! ${humanChoice} beats ${computerChoice}.`);
+        divScore.innerHTML = `You Win! ${humanC} beats ${computerC}.<br>Current Score: ${humanScore} - ${computerScore}`;
+    }
+    document.querySelector(".button-set").appendChild(divScore);
+}
+
+
+function playRound(humanChoice, computerChoice){
+    if (humanChoice == computerChoice) { 
+        // console.log("It's a tie!!!!!");
+        createDiv(computerChoice, humanChoice, 1)}
+    else if ((humanChoice == "Rock" && computerChoice == "Paper") || (humanChoice == "Paper" && computerChoice == "Scissors") || (humanChoice == "Scissors" && computerChoice == "Rock")) {
+        // console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        computerScore += 1;
+        createDiv(computerChoice, humanChoice, 2);
+    }
+    else {
+        // console.log(`You Win! ${humanChoice} beats ${computerChoice}.`);
         humanScore += 1;
+        createDiv(computerChoice, humanChoice, 3);
     } 
-    console.log(humanScore, computerScore);
 }
 
 
@@ -63,9 +83,9 @@ const button_set = document.querySelectorAll("button");
 //     playGame();
 // }
 
-if ((humanScore == 5) || (computerScore == 5))
-    console.log(`The final score is Human: ${humanScore} |||||| Computer: ${computerScore}`);
-else
-    button_set.forEach((buttons) => {buttons.addEventListener("click", () => playGame(buttons.textContent))});  
+button_set.forEach((buttons) => {buttons.addEventListener("click", () => {
+if(computerScore == 5) alert("The WINNER is Computer");
+else if (humanScore == 5) alert("The WINNER is Human");
+else playGame(buttons.textContent);})});  
 
 // console.log(Math.floor(Math.random() * 3));
