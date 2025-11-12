@@ -7,3 +7,7 @@ A Rock-Paper-Scissors game on the browser console using JavaScript. This is my v
 Version 2:
 
 The game has been updated to include an UI to demonstrate my basic DOM manipulation skills using JS.
+
+Version 3:
+
+Introduced a form to input the players name.
