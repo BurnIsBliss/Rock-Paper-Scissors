@@ -34,9 +34,9 @@ function createDiv(computerC, humanC, statusNo) {
 	if (statusNo == 1) {
 		divScore.innerHTML = `It's a tie!!!!!<br>Current Score: ${humanScore} - ${computerScore}`;
 	} else if (statusNo == 2) {
-		divScore.innerHTML = `You lose! ${computerC} beats ${humanC}.<br>Current Score: ${humanScore} - ${computerScore}`;
+		divScore.innerHTML = `${playerName} Loses! ${computerC} beats ${humanC}.<br>Current Score: ${humanScore} - ${computerScore}`;
 	} else {
-		divScore.innerHTML = `You Win! ${humanC} beats ${computerC}.<br>Current Score: ${humanScore} - ${computerScore}`;
+		divScore.innerHTML = `${playerName} Wins! ${humanC} beats ${computerC}.<br>Current Score: ${humanScore} - ${computerScore}`;
 	}
 	document.querySelector(".button-set").appendChild(divScore);
 }
