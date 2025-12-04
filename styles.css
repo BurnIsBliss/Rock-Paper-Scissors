@@ -1,0 +1,21 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	text-align: center;
+	color: beige;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label {
+	color: beige;
+	text-align: center;
+}
+.NameEntry {
+	margin-bottom: 20px;
+}
+.button-set,
+.NameEntry {
+	text-align: center;
+}

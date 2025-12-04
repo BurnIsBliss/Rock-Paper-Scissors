@@ -11,3 +11,5 @@ The game has been updated to include an UI to demonstrate my basic DOM manipulat
 Version 3:
 
 Introduced a form to input the players name.
+
+Delete commented code
