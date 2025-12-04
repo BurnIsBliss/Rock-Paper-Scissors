@@ -12,4 +12,4 @@ Version 3:
 
 Introduced a form to input the players name.
 
-Delete commented code
+Delete commented code.
