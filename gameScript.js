@@ -53,7 +53,7 @@ button_set.forEach((buttons) => {
 		if (computerScore == 0 && humanScore == 0) {
 			playerName = document.querySelector("#Name").value
 				? document.querySelector("#Name").value
-				: "No Name";
+				: "Bob Marshal";
 		}
 		if (computerScore == 5) alert("The WINNER is Computer.");
 		else if (humanScore == 5) alert(`The WINNER is ${playerName}.`);
