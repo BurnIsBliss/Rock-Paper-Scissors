@@ -55,8 +55,8 @@ button_set.forEach((buttons) => {
 				? document.querySelector("#Name").value
 				: "No Name";
 		}
-		if (computerScore == 5) alert("The WINNER is Computer");
-		else if (humanScore == 5) alert(`The WINNER is ${playerName}`);
+		if (computerScore == 5) alert("The WINNER is Computer.");
+		else if (humanScore == 5) alert(`The WINNER is ${playerName}.`);
 		else playGame(buttons.textContent);
 	});
 });
